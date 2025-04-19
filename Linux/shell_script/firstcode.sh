@@ -3,6 +3,8 @@
 multiline comment
 
 run script => ./filepath/filename.sh
+or 
+sh filename.sh
 help
 
 # ================== script started here ==================
