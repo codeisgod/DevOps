@@ -7,7 +7,7 @@
 
 # def lambda_handler(event, context):
 #     # EC2 instance ID and region
-#     instance_id = "i-0ec2f0f89cc10dfe4"  # Replace with your EC2 instance ID
+#     instance_id = "i-example"  # Replace with your EC2 instance ID
 #     region = "us-east-1"  # Replace with the region of your EC2 instance
     
 #     # Create EC2 client using boto3
@@ -52,8 +52,6 @@ def lambda_handler(event, context):
         
     instance_id = body.get('instance_id')
     region = body.get('region')
-    #instance_id = "i-0ec2f0f89cc10dfe4"  # Replace with your EC2 instance ID
-    #region = "us-east-1"  # Replace with the region of your EC2 instance
     
     # Create EC2 client using boto3
     ec2_client = boto3.client("ec2", region_name=region)
