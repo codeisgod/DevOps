@@ -61,6 +61,12 @@ def lambda_handler(event, context):
             SubnetId=subnet_id,
             SecurityGroupIds=[security_group_id],
             KeyName=key_name,
+            # AssociatePublicIpAddress=True,
+            # NetworkInterfaces=[{
+            #     'SubnetId': subnet_id,
+            #     'DeviceIndex': 0,
+            #     'AssociatePublicIpAddress': True  # Set to False if you don't want public IP
+            # }],
             BlockDeviceMappings=block_device_mappings,
             TagSpecifications=[{
                 'ResourceType': 'instance',
