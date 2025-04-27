@@ -18,6 +18,39 @@ Imagine you're managing a **Linux-based production server** and need to ensure t
   - Set a password and grant **sudo** access.
   - Restrict SSH login for certain users in `/etc/ssh/sshd_config`.
 
+- **Solution:**
+  - To create user and change password
+  ```shell
+  useradd -m <username> #-m for create directory (home directory) for user in home
+  passwd <username>
+  ```
+
+  - To Create User Group and Add user in Group
+  ```shell
+  groupadd <groupName>
+  gpasswd -a <user> <group>
+  or
+  usermod -aG <group> <user>
+  ```
+
+  - To grany sudo access to user
+    - To grant Sudo access in RHEL
+      - we can add user in `wheel` group.
+    - To grant Sudo access in Ubuntu
+      - we can add user in `sudo` group.
+    - open `sudoers` file using command `visudo` and add access.
+    ```shell
+    visudo
+    <user> ALL=(ALL:ALL) ALL
+    ```
+  
+  - Restrict SSH Login
+    - DenyUsers: To Deny SSH login.
+    - AllowUsers: To explicitely allow access (ByDefault allow is there)
+  ```shell
+  vi /etc/ssh/sshd_config
+  DenyUsers <user>
+  ```
 ---
 
 ### **2️⃣ File & Directory Permissions**
