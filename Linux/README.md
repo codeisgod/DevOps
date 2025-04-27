@@ -60,6 +60,72 @@ Imagine you're managing a **Linux-based production server** and need to ensure t
     - **Owner can edit**, **group can read**, **others have no access**.
   - Use `ls -l` to verify permissions.
 
+- **Solution:**
+  - rwx (user group other) for each showcased in linux
+  - for this porpose we are using below table
+  <table> 
+    <th>
+      <td>r</td>
+      <td>w</td>
+      <td>x</td>
+      <td>number</td>
+      <td>access</td>
+    </th>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>no access</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>only execute</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>only write</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>write and execute</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>read only</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>7</td>
+    </tr>
+  </table>
+
 ---
 
 ### **3️⃣ Log File Analysis with AWK, Grep & Sed**
