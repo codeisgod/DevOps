@@ -63,67 +63,74 @@ Imagine you're managing a **Linux-based production server** and need to ensure t
 - **Solution:**
   - rwx (user group other) for each showcased in linux
   - for this porpose we are using below table
-  <table> 
-    <th>
-      <td>r</td>
-      <td>w</td>
-      <td>x</td>
-      <td>number</td>
-      <td>access</td>
-    </th>
-    <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>no access</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>only execute</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>2</td>
-      <td>only write</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>write and execute</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>4</td>
-      <td>read only</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>7</td>
-    </tr>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>r</th>
+        <th>w</th>
+        <th>x</th>
+        <th>Number</th>
+        <th>Access</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>No access</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>Execute only</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>2</td>
+        <td>Write only</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>3</td>
+        <td>Write and execute</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>4</td>
+        <td>Read only</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>5</td>
+        <td>Read and execute</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>6</td>
+        <td>Read and write</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>7</td>
+        <td>Read, write, execute</td>
+      </tr>
+    </tbody>
   </table>
 
 ---
