@@ -140,7 +140,7 @@ Imagine you're managing a **Linux-based production server** and need to ensure t
   chmod 240 devops_workspace
   chmod 240 project_notes.txt
   ```
-
+  
 ---
 
 ### **3️⃣ Log File Analysis with AWK, Grep & Sed**
