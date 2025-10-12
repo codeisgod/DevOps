@@ -1,0 +1,22 @@
+stages:
+  - stop_ec2
+
+stop_all_ec2_instances:
+  stage: stop_ec2
+  image: python:3.9
+  before_script:
+    - pip install awscli
+  script:
+    - echo "Fetching all AWS regions..."
+    - regions=$(aws ec2 describe-regions --query "Regions[].RegionName" --output text)
+    - |
+      for region in $regions; do
+        echo "Stopping instances in region: $region"
+        instance_ids=$(aws ec2 describe-instances --region $region --query "Reservations[].Instances[?State.Name=='running'].InstanceId" --output text)
+        if [ -n "$instance_ids" ]; then
+          aws ec2 stop-instances --region $region --instance-ids $instance_ids
+          echo "Stopped instances: $instance_ids"
+        else
+          echo "No running instances found in $region"
+        fi
+      done
